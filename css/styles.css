@@ -24,7 +24,7 @@
 
 .container {
   inline-size: 83.85vw;
-  min-inline-size: 314.4px;
+  min-inline-size: 19.65rem;
 }
 
 .header {
@@ -149,7 +149,7 @@
   }
 
   .hero__media {
-    max-inline-size: 608px;
+    max-inline-size: 38rem;
   }
 }
 

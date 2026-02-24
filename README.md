@@ -11,10 +11,14 @@ The project focuses on semantic HTML, modern CSS, accessibility, and responsive 
 
 ![Mobile states](./docs/mobile-states.avif)
 
-### 💻 Desktot - Default & Hover States
+### 💻 Desktot - Default State
 
-| ![Desktop default](./docs/desktop-default.avif) | ![Desktop hover](./docs/desktop-hover.avif) |
-| --- | --- |
+![Desktop default](./docs/desktop-default.avif)
+
+### 💻 Desktot - Hover State
+
+![Desktop hover](./docs/desktop-hover.avif) |
+
 
 ---
 
@@ -28,7 +32,7 @@ The project focuses on semantic HTML, modern CSS, accessibility, and responsive 
 
 - [Live site](https://vimpdev.github.io/fem-02-huddle-landing-page/)
 
-<!-- - [Frontend Mentor solution](https://your-live-site-url.com) -->
+- [Frontend Mentor solution](https://www.frontendmentor.io/solutions/mobile-first-responsive-huddle-landing-page-ga4ilz1IP5)
 
 ---
 
