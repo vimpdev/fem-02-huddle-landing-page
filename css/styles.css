@@ -1,0 +1,248 @@
+:root {
+  --purple-700: hsl(257, 40%, 49%);
+  --magenta-400: hsl(300, 69%, 71%);
+  --pink-400: hsl(322, 69%, 66%);
+  --white: #fff;
+  --black: #000;
+  --ff-poppins: 'Poppins', sans-serif;
+  --ff-opensans: 'OpenSans', sans-serif;
+  --fs-l: clamp(1.5rem, 1rem + 2.14vw, 2.475rem);
+  --fs-m: clamp(1rem, .7rem + 1.28vw, 1.125rem);
+  --fs-s: clamp(.75rem, .5rem + 1.07vw, 1.125rem);
+  --fs-xs: .7rem;
+}
+
+.page {
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+  padding-block: 1rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-items: center;
+  background: url('./../assets/images/bg-mobile.svg') no-repeat top center/100vw var(--purple-700);
+}
+
+.container {
+  inline-size: 83.85vw;
+  min-inline-size: 314.4px;
+}
+
+.header {
+  padding-block: 1.1rem;
+}
+
+.header__logo {
+  inline-size: 34vw;
+  max-inline-size: 13.5rem;
+}
+
+
+
+.hero {
+  margin-top: 2.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 3.4em;
+  color: var(--white);
+}
+
+.hero__media {
+  padding-inline: .15rem;
+  flex: 1;
+}
+
+.hero__content {
+  text-align: center;
+}
+
+.hero__title {
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-l);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.hero__description {
+  margin-top: 1.45rem;
+  padding-inline: .5em;
+  font-family: var(--ff-opensans);
+  font-size: var(--fs-m);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.btn {
+  inline-size: 12.5rem;
+  margin-top: 1.95rem;
+  padding-block: .9rem;
+  display: inline-block;
+  font-family: var(--ff-poppins);
+  font-weight: 400;
+  font-size: var(--fs-s);
+  text-align: center;
+  color: var(--purple-700);
+  background-color: var(--white);
+  border-radius: 3rem;
+  box-shadow: 2px 4px 9px 3px hsl(from var(--black) h s l/ .25);
+  transition: color .3s ease-in-out, background-color .3s ease-in-out;
+}
+
+.footer {
+  padding: 2rem 0 1rem;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.social__link {
+  inline-size: 1.7rem;
+  block-size: 1.7rem;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--white);
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  transition: color .3s ease-in-out;
+}
+
+.social__icon {
+  inline-size: 1rem;
+  block-size: 1rem;
+  color: inherit;
+}
+
+.footer__attribution {
+  margin-top: .6rem;
+  font-family: var(--ff-opensans);
+  font-size: var(--fs-xs);
+  font-weight: 400;
+  color: var(--white);
+  text-align: center;
+}
+
+.attribution__link {
+  margin-inline: .3em;
+  position: relative;
+}
+
+.attribution__link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  inline-size: 100%;
+  block-size: 1.6px;
+  background-color: currentColor;
+  transition: inline-size .3s ease-in-out;
+}
+
+@media (width >=48rem) {
+  .container {
+    max-inline-size: 38rem;
+  }
+
+  .hero__media {
+    max-inline-size: 608px;
+  }
+}
+
+@media (width >=64rem) {
+  .page {
+    background-image: url('./../assets/images/bg-desktop.svg');
+    background-position: center left;
+  }
+
+  .container {
+    inline-size: 100%;
+    max-inline-size: 62.5rem;
+  }
+
+  .header {
+    padding-block: 2.3rem;
+  }
+
+  .hero {
+    margin-top: 3.15rem;
+    row-gap: unset;
+    gap: 1.88em;
+  }
+
+  .hero__content {
+    flex-basis: 32.5rem;
+    text-align: left;
+    padding-top: 2.8rem;
+  }
+
+
+  .hero__title {
+    line-height: 1.52;
+  }
+
+  .hero__description {
+    margin-top: 1.1rem;
+    padding-inline: unset;
+  }
+
+  .btn {
+    margin-top: 1.5rem;
+    padding-block: 1.19rem;
+  }
+
+  .footer {
+    padding: unset;
+  }
+
+  .social {
+    padding-right: .7rem;
+    justify-content: flex-end;
+  }
+
+  .social__link {
+    inline-size: 2.5rem;
+    block-size: 2.5rem;
+  }
+
+  .social__icon {
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+  }
+}
+
+@media (width >=85.375rem) {
+  .container {
+    max-inline-size: 81.4rem;
+  }
+
+  .hero__media {
+    max-inline-size: 46rem;
+    padding-inline: .25rem;
+  }
+}
+
+*:focus-visible {
+  outline: 2px dotted currentColor;
+  outline-offset: 2px;
+}
+
+.btn:focus-visible,
+.btn:hover {
+  color: var(--white);
+  background-color: var(--magenta-400);
+}
+
+.social__link:focus-visible,
+.social__link:hover {
+  color: var(--pink-400);
+}
+
+.attribution__link:focus-visible::after,
+.attribution__link:hover::after {
+  inline-size: 0;
+}
